@@ -305,9 +305,8 @@ export default function App() {
   };
 
   return (
-
     <Layout currentView={view} setView={setView} userState={userState}>
-
       {renderView()}
-
     </Layout>
+  );
+}
