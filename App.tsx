@@ -151,7 +151,7 @@ export default function App() {
 
     switch(view) {
       case AppView.HOME: return (
-        <div className="space-y-6 max-w-4xl mx-auto pb-16 animate-[fadeIn_0.8s_ease-out] text-sm">
+        <div className="space-y-12 max-w-7xl mx-auto pb-32 animate-[fadeIn_0.8s_ease-out]">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
             {/* Hero Card */}
             <div className="lg:col-span-8 glass-card p-12 rounded-[3.5rem] flex flex-col md:flex-row items-center gap-12 relative overflow-hidden group">
@@ -305,8 +305,11 @@ export default function App() {
   };
 
   return (
+  <div style={{ zoom: "0.9" }}> {/* Diminui tudo em 10% mantendo a proporção */}
     <Layout currentView={view} setView={setView} userState={userState}>
-      {renderView()}
+      <div className="px-4"> {/* Dá um respiro nas laterais para não grudar na borda */}
+        {renderView()}
+      </div>
     </Layout>
-  );
-}
+  </div>
+);
