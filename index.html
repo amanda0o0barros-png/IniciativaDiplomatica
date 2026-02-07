@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciativa Diplomática v1.0 🐾</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Outfit', 'sans-serif'],
+              serif: ['Instrument Serif', 'serif'],
+            },
+            colors: {
+              brandGold: '#fce7ba',
+              brandPink: '#ffd1d1',
+              brandTeal: '#b8e4e6',
+              brandRed: '#ff9999',
+              softBg: '#faf9f6',
+              diplomatBlue: '#0f172a',
+            },
+            borderRadius: {
+              '4xl': '2rem',
+              '5xl': '3rem',
+              '6xl': '4rem',
+            },
+            animation: {
+              'aurora': 'aurora 20s linear infinite',
+              'float': 'float 6s ease-in-out infinite',
+            },
+            keyframes: {
+              aurora: {
+                '0%, 100%': { backgroundPosition: '0% 50%' },
+                '50%': { backgroundPosition: '100% 50%' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0px)' },
+                '50%': { transform: 'translateY(-20px)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+        body {
+            background: #faf9f6;
+            color: #0f172a;
+            overflow-x: hidden;
+            font-feature-settings: "ss01", "ss02", "cv01";
+        }
+        .aurora-bg {
+            background: linear-gradient(-45deg, #faf9f6, #fce7ba, #ffd1d1, #b8e4e6);
+            background-size: 400% 400%;
+            animation: aurora 15s ease infinite;
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            opacity: 0.4;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 20px 40px -10px rgba(0,0,0,0.03);
+        }
+        .sticker-card {
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .sticker-card:hover {
+            transform: translateY(-12px) scale(1.01) rotate(0.5deg);
+            box-shadow: 0 40px 80px -20px rgba(255, 176, 176, 0.2);
+        }
+        .dock-shadow {
+            box-shadow: 0 -10px 40px rgba(0,0,0,0.05);
+        }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-thumb { background: #e2e8f0; border-radius: 10px; }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.40.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div class="aurora-bg"></div>
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>

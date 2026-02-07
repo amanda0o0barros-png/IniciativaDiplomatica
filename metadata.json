@@ -1,0 +1,7 @@
+{
+  "name": "DiplomatAI - Mentor CACD",
+  "description": "Uma plataforma avançada de mentoria e correção de discursivas para o Concurso de Admissão à Carreira de Diplomata (CACD), simulando o rigor dos manuais do Instituto Rio Branco e dos guias dos aprovados.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
