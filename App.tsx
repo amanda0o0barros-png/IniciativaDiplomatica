@@ -305,11 +305,9 @@ export default function App() {
   };
 
   return (
-  <div style={{ zoom: "0.9" }}> {/* Diminui tudo em 10% mantendo a proporção */}
+
     <Layout currentView={view} setView={setView} userState={userState}>
-      <div className="px-4"> {/* Dá um respiro nas laterais para não grudar na borda */}
-        {renderView()}
-      </div>
+
+      {renderView()}
+
     </Layout>
-  </div>
-);
